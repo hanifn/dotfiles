@@ -40,4 +40,5 @@ brew install CMake
 sudo brew link CMake
 
 # Compile YouCompleteMe
-$vimfile/bundle/YouCompleteMe/install.py --clang-completer
+cd $vimfile/bundle/YouCompleteMe
+./install.py --clang-completer
