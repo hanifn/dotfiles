@@ -1,6 +1,6 @@
 .DS_Store
 spell/
 tags
-.vim/bundle/*
-.vim/sessions/*
-.vim/plugged/*
+vim/bundle/*
+vim/sessions/*
+vim/plugged/*
