@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/2359hanif/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python/easy_install"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python/easy_install:/usr/local/sbin:$HOME/.composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,4 +82,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/sbin:/Users/2359hanif/.composer/vendor/bin:$PATH"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+if [ -d "$HOME/Library/Python/2.7/bin" ]; then
+    PATH="$HOME/Library/Python/2.7/bin:$PATH"
+fi
+
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+. $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# thefuck
+eval "$(thefuck --alias)"
