@@ -8,6 +8,15 @@ vimfiles=$dotfiles/vim
 tmux_conf=$dotfiles/.tmux.conf
 tmux_powerline_rc=$dotfiles/.tmux-powerlinerc
 
+# install python
+brew install python
+
+# Install powerline
+pip install powerline-status
+
+# Install MacVim
+brew install macvim --env-std --override-system-vim
+
 # Install AG
 brew install the_silver_searcher
 sudo brew link pcre xz the_silver_searcher

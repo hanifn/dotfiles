@@ -92,7 +92,9 @@ fi
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-. $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+# Find pip repository dir
+PIP_REPO="$(pip show powerline-status | grep 'Location' | awk '{ print $2 }')"
+. $PIP_REPO/powerline/bindings/zsh/powerline.zsh
 
 # thefuck
 eval "$(thefuck --alias)"
