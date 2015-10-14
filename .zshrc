@@ -49,11 +49,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git brew composer laravel thefuck python vagrant)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python/easy_install:/usr/local/sbin:$HOME/.composer/vendor/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python/easy_install:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -95,6 +95,3 @@ export LANG=en_US.UTF-8
 # Find pip repository dir
 PIP_REPO="$(pip show powerline-status | grep 'Location' | awk '{ print $2 }')"
 . $PIP_REPO/powerline/bindings/zsh/powerline.zsh
-
-# thefuck
-eval "$(thefuck --alias)"
