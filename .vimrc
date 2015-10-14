@@ -29,6 +29,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+
 " Git wrapper plugin by Tim Pope
 Plugin 'tpope/vim-fugitive'
 
@@ -409,12 +410,24 @@ endif
 cnoremap <expr> <C-P> getcmdline()[getcmdpos()-2] ==# ' ' ? expand('%:p:h') : "\<C-P>"
 
 " powerline 
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" These lines setup the environment to show graphics and colors correctly.
+set nocompatible
+set t_Co=256
+
+let g:minBufExplForceSyntaxEnable = 1
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
 " powerline fonts
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set fillchars+=stl:\ ,stlnc:\
+set termencoding=utf-8
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar

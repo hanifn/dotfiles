@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,10 +53,21 @@ plugins=(git brew composer laravel thefuck python vagrant)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python/easy_install:/usr/local/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
+# Powerline settings
+POWERLINE_DETECT_SSH="true"
+POWERLINE_GIT_CLEAN="✔"
+POWERLINE_GIT_DIRTY="✘"
+POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
+POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
+POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
+POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
+POWERLINE_GIT_RENAMED="➜"
+POWERLINE_GIT_UNMERGED="═"
 
 source $ZSH/oh-my-zsh.sh
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/python/easy_install:/usr/local/sbin"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
