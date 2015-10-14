@@ -51,7 +51,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/vimproc.vim'
 
 " NeoMRU for Unite's MRU source
-Plugin 'Shougo/neomru.vim'
+" Plugin 'Shougo/neomru.vim'
+
+" Use unite to browse ctags
+Plugin 'tsukkee/unite-tag'
 
 " Outline source plugin for Unite
 Plugin 'Shougo/unite-outline'
@@ -529,7 +532,11 @@ endif
 
 nnoremap <leader>t :<C-u>Unite -buffer-name=files   -start-insert file_rec/async:!<cr>
 nnoremap <leader>f :<C-u>Unite -buffer-name=files   -start-insert file<cr>
-nnoremap <leader>r :<C-u>Unite -buffer-name=mru     -start-insert file_mru<cr>
+" Stopped using MRU browser due to errors popping up in neomru plugin
+" I don't really use it much anyway
+" TODO: Find out how to resolve this
+" nnoremap <leader>r :<C-u>Unite -buffer-name=mru     -start-insert file_mru<cr>
+nnoremap <leader>r :<C-u>Unite -buffer-name=tags    -start-insert tag<cr>
 nnoremap <leader>o :<C-u>Unite -buffer-name=outline -start-insert outline<cr>
 nnoremap <leader>y :<C-u>Unite -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :<C-u>Unite -buffer-name=buffer  -quick-match buffer<cr>
