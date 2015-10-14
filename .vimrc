@@ -74,6 +74,9 @@ Plugin 'mattn/emmet-vim'
 " DelimitMate pluginf or auto closing of quotes etc
 Plugin 'Raimondi/delimitMate'
 
+" Automatically update tags
+Plugin 'craigemery/vim-autotag'
+
 " Surround plugin for surrounding stuff
 Plugin 'tpope/vim-surround'
 
@@ -519,6 +522,7 @@ let g:unite_source_history_yank_enable = 1
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
+" set ag as the default search program
 if executable('ag')
      let g:unite_source_rec_async_command = ['ag', '--nocolor', '--nogroup', '--hidden', '-g', ""]
 endif
