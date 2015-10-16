@@ -48,6 +48,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Autocompleter plugin
 Plugin 'Valloric/YouCompleteMe'
 
+" Improved PHP Omnicompleter engine
+Plugin 'shawncplus/phpcomplete.vim'
+
 " Vimproc plugin for unite
 Plugin 'Shougo/vimproc.vim'
 
@@ -522,6 +525,20 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+""
+"" YouCompleteMe settings
+""
+
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+"Do not ask when starting vim
+let g:ycm_confirm_extra_conf = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_register_as_syntastic_checker = 0
+set tags+=./tags
 
 ""
 "" Unite mappings
