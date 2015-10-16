@@ -431,6 +431,8 @@ let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 set termencoding=utf-8
+" Hide standard status mode since powerline already shows this
+set noshowmode
 
 if has("statusline") && !&cp
   set laststatus=2  " always show the status bar
