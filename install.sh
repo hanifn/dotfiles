@@ -33,8 +33,8 @@ brew install ctags
 [[ ! -e $HOME/.vimrc ]] && ln -s $vimrc $HOME/.vimrc \
   || echo ".vimrc already exists..."
 
-#[[ ! -e $HOME/.gvimrc ]] && ln -s $gvimrc $HOME/.gvimrc \
-  #|| echo ".gvimrc already exists..."
+[[ ! -e $HOME/.gvimrc ]] && ln -s $gvimrc $HOME/.gvimrc \
+  || echo ".gvimrc already exists..."
 
 [[ ! -e $HOME/.vim ]] && ln -s $vimfiles $HOME/.vim \
   || echo ".vim already exists..."
