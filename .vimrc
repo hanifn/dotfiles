@@ -66,6 +66,12 @@ Plugin 'Shougo/unite-outline'
 " Unite fuzzy search plugin
 Plugin 'Shougo/unite.vim'
 
+" Snippets engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets collection
+Plugin 'honza/vim-snippets'
+
 " Easy motion plugin
 Plugin 'easymotion/vim-easymotion'
 
@@ -542,6 +548,11 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_register_as_syntastic_checker = 0
 set tags+=./tags
 
+" override standard tab key to select autocomplete
+" so as not to clash with ultisnips
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
 ""
 "" Unite mappings
 ""
@@ -586,6 +597,17 @@ function! s:unite_settings()
   inoremap <silent><buffer><expr> <C-i>     unite#do_action('split')
   inoremap <silent><buffer><expr> <C-s>     unite#do_action('vsplit')
 endfunction
+
+""
+"" UltiSnips
+""
+" Trigger configuration.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Janus mappings for fugitive plugin
 nmap <leader>gb :Gblame<CR>
