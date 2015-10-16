@@ -550,8 +550,8 @@ set tags+=./tags
 
 " override standard tab key to select autocomplete
 " so as not to clash with ultisnips
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+"let g:ycm_key_list_select_completion=[]
+"let g:ycm_key_list_previous_completion=[]
 
 ""
 "" Unite mappings
@@ -602,7 +602,7 @@ endfunction
 "" UltiSnips
 ""
 " Trigger configuration.
-let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-y>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
