@@ -123,6 +123,9 @@ Plugin 'godlygeek/tabular'
 " Improved Markdown plugin
 Plugin 'plasticboy/vim-markdown'
 
+" Debugger plugin for Xdebug/DGBC support
+Plugin 'joonty/vdebug.git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -539,7 +542,7 @@ let g:syntastic_check_on_wq = 0
 ""
 
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+"nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 "let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 "Do not ask when starting vim
 let g:ycm_confirm_extra_conf = 0
@@ -643,3 +646,28 @@ omap / <Plug>(easymotion-tn)
 " different highlight method and have some other features )
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
+
+""
+"" Vdebug
+""
+
+" Set remote path mappings
+let g:vdebug_options= {
+\    "port" : 9000,
+\    "server" : '',
+\    "timeout" : 20,
+\    "on_close" : 'detach',
+\    "break_on_open" : 1,
+\    "ide_key" : '',
+\    "path_maps" : {
+\        "/Users/2359hanif/workspace/ls-engine": "/vagrant",
+\        "/vagrant": "/Users/2359hanif/workspace/ls-engine"
+\    },
+\    "debug_window_level" : 0,
+\    "debug_file_level" : 0,
+\    "debug_file" : "",
+\    "watch_window_style" : 'expanded',
+\    "marker_default" : '⬦',
+\    "marker_closed_tree" : '▸',
+\    "marker_open_tree" : '▾'
+\}
