@@ -548,11 +548,6 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_register_as_syntastic_checker = 0
 set tags+=./tags
 
-" override standard tab key to select autocomplete
-" so as not to clash with ultisnips
-"let g:ycm_key_list_select_completion=[]
-"let g:ycm_key_list_previous_completion=[]
-
 ""
 "" Unite mappings
 ""
@@ -567,6 +562,7 @@ let g:unite_source_grep_recursive_opt = ''
 let g:unite_source_history_yank_enable = 1
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
 
 " set ag as the default search program
 if executable('ag')
