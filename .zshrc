@@ -106,3 +106,6 @@ export LANG=en_US.UTF-8
 # Find pip repository dir
 PIP_REPO="$(pip show powerline-status | grep 'Location' | awk '{ print $2 }')"
 . $PIP_REPO/powerline/bindings/zsh/powerline.zsh
+
+# add composer path
+export PATH=$HOME/.composer/vendor/bin:$PATH
