@@ -109,3 +109,6 @@ PIP_REPO="$(pip show powerline-status | grep 'Location' | awk '{ print $2 }')"
 
 # add composer path
 export PATH=$HOME/.composer/vendor/bin:$PATH
+
+# add postgres.app path
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
