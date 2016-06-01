@@ -126,6 +126,9 @@ Plugin 'plasticboy/vim-markdown'
 " Debugger plugin for Xdebug/DGBC support
 Plugin 'joonty/vdebug.git'
 
+" EditorConfig plugin
+Plugin 'editorconfig/editorconfig-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -673,3 +676,10 @@ let g:vdebug_options= {
 \    "marker_closed_tree" : '▸',
 \    "marker_open_tree" : '▾'
 \}
+
+""
+"" EditorConfig options
+""
+
+" Ensure works with Fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']

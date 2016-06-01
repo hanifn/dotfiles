@@ -112,3 +112,9 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # add postgres.app path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+
+# add mysql path
+export PATH=/usr/local/mysql/bin:$PATH
+
+export NVM_DIR="/Users/2359hanif/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
