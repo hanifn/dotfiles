@@ -126,6 +126,9 @@ Plugin 'plasticboy/vim-markdown'
 " Debugger plugin for Xdebug/DGBC support
 Plugin 'joonty/vdebug.git'
 
+" Scala plugin
+Plugin 'derekwyatt/vim-scala'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
