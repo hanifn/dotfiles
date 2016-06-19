@@ -103,6 +103,16 @@ fi
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
+# fix for missing powerline.vim in vim
+if test -z "${POWERLINE_CONFIG_COMMAND}" ; then
+    if which powerline-config >/dev/null ; then
+        POWERLINE_CONFIG_COMMAND=powerline-config
+    else
+        POWERLINE_CONFIG_COMMAND="/usr/local/bin/powerline-config"
+        #POWERLINE_CONFIG_COMMAND="$_POWERLINE_SOURCED:h:h:h:h/scripts/powerline-config"
+    fi
+fi
+
 # Find pip repository dir
 PIP_REPO="$(pip show powerline-status | grep 'Location' | awk '{ print $2 }')"
 . $PIP_REPO/powerline/bindings/zsh/powerline.zsh
