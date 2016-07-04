@@ -42,6 +42,9 @@ Plugin 'scrooloose/nerdcommenter'
 " Syntactic syntax checker plugin
 Plugin 'scrooloose/syntastic'
 
+" Plugin for syntastic to use local eslint
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+
 " Solarized color theme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -435,7 +438,7 @@ set nocompatible
 set t_Co=256
 
 let g:minBufExplForceSyntaxEnable = 1
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
