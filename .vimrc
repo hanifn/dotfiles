@@ -36,6 +36,9 @@ Plugin 'tpope/vim-fugitive'
 " NERD Tree plugin for file management
 Plugin 'scrooloose/nerdtree'
 
+" Vinegar for file management
+Plugin 'dhruvasagar/vim-vinegar'
+
 " NERD Commentor plugin
 Plugin 'scrooloose/nerdcommenter'
 
