@@ -19,10 +19,15 @@ brew install macvim --env-std --override-system-vim
 
 # Install AG
 brew install the_silver_searcher
-sudo brew link pcre xz the_silver_searcher
+brew link pcre xz the_silver_searcher
 
 # Install Exuberant ctags
 brew install ctags
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+pip install thefuck
 
 [[ ! -e $HOME/.zshrc ]] && ln -s $zshrc $HOME/.zshrc \
   || echo ".zshrc already exists..."
@@ -53,8 +58,14 @@ vim +PluginInstall +qall
 
 # Install CMake to compile YCM
 brew install CMake
-sudo brew link CMake
+brew link CMake
 
 # Compile YouCompleteMe
-cd $vimfile/bundle/YouCompleteMe
+cd $vimfiles/bundle/YouCompleteMe
 ./install.py --clang-completer
+
+# Install powerline fonts
+git clone https://github.com/powerline/fonts.git \
+    ~/fonts
+cd ~/fonts
+./install.sh
