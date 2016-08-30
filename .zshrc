@@ -128,3 +128,6 @@ export PATH=/usr/local/mysql/bin:$PATH
 
 export NVM_DIR="/Users/hanifnorman/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# add golang path
+export PATH=$PATH:/usr/local/go/bin
