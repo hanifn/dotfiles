@@ -138,6 +138,15 @@ Plugin 'derekwyatt/vim-scala'
 " EditorConfig plugin
 Plugin 'editorconfig/editorconfig-vim'
 
+" Mustache Handlebars plugin
+Plugin 'mustache/vim-mustache-handlebars'
+
+" Golang plugin
+Plugin 'fatih/vim-go'
+
+" JS Tern plugin
+Plugin 'marijnh/tern_for_vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
