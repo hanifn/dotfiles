@@ -3,6 +3,8 @@ My dotfiles configuration
 
 ## Dependencies
 - [Homebrew](https://brew.sh/)
+- Xcode
+- Select Xcode app CLI tools `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`
 
 ## Install
 
@@ -13,5 +15,3 @@ cd ~/.dotfiles
 ```
 
 ## Post-install
-- Install Xcode from App store
-- Select Xcode app CLI tools `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`
