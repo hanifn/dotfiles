@@ -3,6 +3,7 @@ dotfiles=$HOME/.dotfiles
 zshrc=$dotfiles/.zshrc
 vimrc=$dotfiles/.vimrc
 gvimrc=$dotfiles/.gvimrc
+ideavimrc=$dotfiles/.ideavimrc
 ctags=$dotfiles/.ctags
 vimfiles=$dotfiles/vim
 tmux_conf=$dotfiles/.tmux.conf
@@ -15,7 +16,7 @@ brew install python
 pip install powerline-status
 
 # Install MacVim
-brew install macvim --env-std --override-system-vim
+brew install macvim --with-override-system-vim
 
 # Install AG
 brew install the_silver_searcher
@@ -33,13 +34,16 @@ pip install thefuck
   || echo ".zshrc already exists..."
 
 [[ ! -e $HOME/.ctags ]] && ln -s $ctags $HOME/.ctags \
-  || echo ".zshrc already exists..."
+  || echo ".ctags already exists..."
 
 [[ ! -e $HOME/.vimrc ]] && ln -s $vimrc $HOME/.vimrc \
   || echo ".vimrc already exists..."
 
 [[ ! -e $HOME/.gvimrc ]] && ln -s $gvimrc $HOME/.gvimrc \
   || echo ".gvimrc already exists..."
+
+[[ ! -e $HOME/.ideavimrc ]] && ln -s $ideavimrc $HOME/.ideavimrc \
+  || echo ".ideavimrc already exists..."
 
 [[ ! -e $HOME/.vim ]] && ln -s $vimfiles $HOME/.vim \
   || echo ".vim already exists..."
@@ -69,3 +73,6 @@ git clone https://github.com/powerline/fonts.git \
     ~/fonts
 cd ~/fonts
 ./install.sh
+
+# install peco
+brew install peco
