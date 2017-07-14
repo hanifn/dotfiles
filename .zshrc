@@ -130,5 +130,20 @@ export NVM_DIR="/Users/hanifnorman/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # add golang path
-export GOPATH=$HOME/gowork
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# SP network proxy settings
+export http_proxy=`scutil --proxy | awk '\
+  /HTTPEnable/ { enabled = $3; } \
+  /HTTPProxy/ { server = $3; } \
+  /HTTPPort/ { port = $3; } \
+  END { if (enabled == "1") { print "http://" server ":" port; } }'`
+if [ "${http_proxy}" != "" ] ; then
+  export HTTP_PROXY="${http_proxy}"
+  export https_proxy="${http_proxy}"
+  export HTTPS_PROXY="${http_proxy}"
+  export no_proxy="*.local, 169.254/16, 10.*, localhost, *.in.spdigital.io, auth.singaporepower.com.sg"
+  export NO_PROXY="${no_proxy}"
+fi
